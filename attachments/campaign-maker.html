@@ -3,13 +3,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Campain Maker</title>
     <link href="layout.css" rel="stylesheet" type="text/css">
-    <link href="jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css">
+    <link href="css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css">
 
     <script language="javascript" type="text/javascript" src="lib/jquery-1.6.2.min.js"></script>
     <script language="javascript" type="text/javascript" src="lib/jquery-ui-1.8.16.custom.min.js"></script>
     <script language="javascript" type="text/javascript" src="lib/jquery.couch.js"></script>
     <script language="javascript" type="text/javascript" src="lib/couchDBhelpers.js"></script>
-     
+    
 
     <script language="javascript" type="text/javascript" src="lib/underscore.js"></script>
     <script language="javascript" type="text/javascript" src="lib/mustache.js"></script>
@@ -17,7 +17,7 @@
     <script type="text/javascript" src="lib/form2object.js"></script>
     <script type="text/javascript" src="lib/json2.js"></script>
     <script language="javascript" type="text/javascript" src="lib/js2form.js"></script>
-	<script language="javascript" type="text/javascript" src="lib/jquery.MultiFile.js"></script>
+    <script language="javascript" type="text/javascript" src="lib/jquery.MultiFile.js"></script>
     <script language="javascript" type="text/javascript" src="lib/jquery.MultiFile.pack.js"></script>
 
     <script language="javascript" type="text/javascript" src="site.js"></script>
@@ -27,95 +27,89 @@
     <script language="javascript" type="text/javascript" src="lib/docRdy.js"></script> <!-- needs to go last -->
     
 
-  </head>
 
   </head>
-</head>
-<body>
-<h1>New Campaign Maker</h1>
-  <form id="testForm" action="javascript:test()">
-    <dl>
-      <dt><label for="_id">Campaign ID</label></dt>
-      <dd><input id="_id" type="text" name="_id"/></dd>
-    </dl>
-    <dl>
-      <dt>Description</dt>
-      <dd><input id="description" type="text" name="description"/></dd>
-	</dl>
-	<dl>
-		<dt>Air Date</dt>
-		<dd>
-			<label>from <input id="startDate" type="text" name="time.start" value="" size=10 maxlength=15/></label>
-			<label>to <input id="endDate" type="text" name="time.end" value="" size=10 maxlength=15/></label>
-		</dd>
-	</dl>
-	    <dt><label for="advertiser">Adevertiser</label></dt>
-	    <dd><input id="advertiser" type="text" name="advertiser"/></dd>
-	</dl>
-	<dl>
-	    <dt><label for="salesperson">Salespoerson</label></dt>
-	    <dd><input id="salesperson" type="text" name="salesperson"/></dd>
-	</dl>
-	<dl>
-		<dt><label for="type">Presentation type</label></dt>
-		<dd>
-			<label>Captive <input id="radioCaptive" type="radio" name="radio_type" value="captive" checked="checked"/></label>
-			<label>Passive <input id="radioPassive" type="radio" name="radio_type" value="passive"/></label>
-		</dd>
-	</dl>
-	<dl>
-		<dt><label for="images"> Images </label></dt>
-		<dd><input id="filechooser" type="file" class="multi" name="images"></dd>
-	</dl>
 
-
-	<dl>
-      <dt>Broadcast hours</dt>
-	  			<label>Allday <input id="checkAlldays" type="checkbox" name="all_days"/></label>
-				<label>24hours <input id="checkAlltimes" type="checkbox" name="all_times"/></label>
-      <div id="input1" class="clonedInput">
+  <body>
+    <h1>Campaign Maker</h1>
+    <form id="testForm" action="javascript:test()">
+      <dl>
+	<dt><label for="_id">Campaign ID</label></dt>
+	<dd><input id="_id" type="text" name="_id"/></dd>
+      </dl>
+      <dl>
+	<dt>Description</dt>
+	<dd><input id="description" type="text" name="description"/></dd>
+      </dl>
+      <dl>
+	<dt>Air Date</dt>
 	<dd>
-	  <label>day <input type="text" name="days_and_hours[0].day" value="" size=6 /></label>
-	  <label>start <input type="text" name="days_and_hours[0].time.start" value="" /></label>	
-	  <label>end <input type="text" name="days_and_hours[0].time.end" value="" /></label>	
+	  <label>from <input id="startDate" type="text" name="time.start" value="" size=10 maxlength=15/></label>
+	  <label>to <input id="endDate" type="text" name="time.end" value="" size=10 maxlength=15/></label>
 	</dd>
+      </dl>
+      <dt><label for="advertiser">Adevertiser</label></dt>
+      <dd><input id="advertiser" type="text" name="advertiser"/></dd>
+
+      <dl>
+	<dt><label for="salesperson">Salespoerson</label></dt>
+	<dd><input id="salesperson" type="text" name="salesperson"/></dd>
+      </dl>
+      <dl>
+	<dt><label for="type">Presentation type</label></dt>
+	<dd>
+	  <label>Captive <input id="radioCaptive" type="radio" name="radio_type" value="captive" checked="checked"/></label>
+	  <label>Passive <input id="radioPassive" type="radio" name="radio_type" value="passive"/></label>
+	</dd>
+      </dl>
+      <dl>
+	<dt><label for="images"> Images </label></dt>
+	<dd><input id="filechooser" type="file" class="multi" name="images"></dd>
+      </dl>
+
+
+      <dl>
+	<dt>Broadcast hours</dt>
+	<label>Allday <input id="checkAlldays" type="checkbox" name="all_days"/></label>
+	<label>24hours <input id="checkAlltimes" type="checkbox" name="all_times"/></label>
+	<div id="input1" class="clonedInput">
+	  <dd>
+	    <label>day <input type="text" name="days_and_hours[0].day" value="" size=6 /></label>
+	    <label>start <input type="text" name="days_and_hours[0].time.start" value="" /></label>	
+	    <label>end <input type="text" name="days_and_hours[0].time.end" value="" /></label>	
+	  </dd>
+	</div>
+      </dl>
+
+      <div>
+	<input type="button" id="btnAdd" value="add days/hours" />
+	<input type="button" id="btnDel" value="remove days/hours" />
       </div>
-    </dl>
-
-    <div>
-      <input type="button" id="btnAdd" value="add days/hours" />
-      <input type="button" id="btnDel" value="remove days/hours" />
-    </div>
 
 
-	<dl>
-      <dt>Broadcast locations</dt>
-	  			<label>All Terminals <input type="checkbox" name="all_terminals"/>
-					
-					(	<label>Future <input type="radio" name="radio_terminal" value="future" checked="checked"/>
-						<label>Current <input type="radio" name="radio_terminal" value="current"/> )
-					
-      <div id="input2" class="clonedInput2">
+      <dl>
+	<dt>Broadcast locations</dt>
+	<label>All Terminals <input type="checkbox" name="all_terminals"/>
+	  
+	  (	<label>Future <input type="radio" name="radio_terminal" value="future" checked="checked"/>
+	    <label>Current <input type="radio" name="radio_terminal" value="current"/> )
+	      
+	      <div id="input2" class="clonedInput2">
+	      </div>
+      </dl>
+
+      <div>
+	<input type="button" id="btnAddTerminal" value="add terminals" />
+	<input type="button" id="btnDelTerminal" value="remove terminals" />
       </div>
-    </dl>
 
-    <div>
-      <input type="button" id="btnAddTerminal" value="add terminals" />
-      <input type="button" id="btnDelTerminal" value="remove terminals" />
-    </div>
+      <dl></dl>
+      <dl></dl>
+      <input type="submit" />
+    </form>
 
+    <pre><code id="testArea">
+    </code></pre>
 
-
-<dl></dl>
-<dl></dl>
-<input type="submit" />
-</form>
-
-
-<pre><code id="testArea">
-</code></pre>
-
-
-
-</body>
+  </body>
 </html>

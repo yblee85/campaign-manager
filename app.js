@@ -85,6 +85,17 @@ ddoc.views.CampaignName = {
     }
 };
 
+ddoc.views.advertisers = {
+    map:function(doc) {
+	emit(doc.advertiser,1);
+    },reduce:"_sum"
+};
+ddoc.views.salesPeople = {
+    map:function(doc) {
+	emit(doc.salesperson,1);
+    },reduce:"_sum"
+};
+
 ddoc.filters.forLocation = function(doc, req) {
 
     function contains(array, item){return (array.indexOf(item) != -1);};
