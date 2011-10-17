@@ -89,13 +89,12 @@
 
       <dl>
 	<dt>Broadcast locations</dt>
-	<label>All Terminals <input type="checkbox" name="all_terminals"/>
-	  
-	  (	<label>Future <input type="radio" name="radio_terminal" value="future" checked="checked"/>
-	    <label>Current <input type="radio" name="radio_terminal" value="current"/> )
-	      
-	      <div id="input2" class="clonedInput2">
-	      </div>
+	<label>All Terminals <input type="checkbox" name="all_terminals"/></label>	
+	
+	<label>Future <input type="radio" name="radio_terminal" value="future" checked="checked"/></label>	
+	<label>Current <input type="radio" name="radio_terminal" value="current"/> </label>	
+	
+	<div id="input2" class="clonedInput2"></div>
       </dl>
 
       <div>
@@ -103,13 +102,13 @@
 	<input type="button" id="btnDelTerminal" value="remove terminals" />
       </div>
 
-      <dl></dl>
-      <dl></dl>
+      <dl>
+	<dt>Broadcast Reigons</dt>
+	<label>Country <input type="select" name="countries" value="" /></label>		
+      </dl>
+
       <input type="submit" />
     </form>
-
-    <pre><code id="testArea">
-    </code></pre>
 
   </body>
 </html>
