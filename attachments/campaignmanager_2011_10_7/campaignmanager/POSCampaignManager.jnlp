@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Web Start Deployment Template -->
+<jnlp spec="1.0+"
+    codebase="http://192.168.1.254:5984/campaigns/_design/app/campaignmanager_2011_10_7/"
+    href="campaignmanager/POSCampaignManager.jnlp">
+
+<information>
+    <title>Caqmpaign Manager</title>
+    <vendor>www.rt7.net</vendor>
+    <homepage href="http://www.rt7.net"/>
+    <description>Campaign Manager</description>
+    <description kind="short">
+       Create Campaings
+    </description>
+
+    <offline-allowed/>
+</information>
+
+<security>
+    <all-permissions/>
+</security>
+
+<resources>
+     <j2se version="1.7+" java-vm-args="-Xmx1000M -Xms150M" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="campaignmanager/POSCampaignManager.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/>
+    <jar href="campaignmanager/lib/commons-logging-1.1.1.jar"/>
+</resources>
+
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/>
+    <jar href="campaignmanager/lib/httpclient-4.1.2.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+    <jar href="campaignmanager/lib/httpclient-cache-4.1.2.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+    <jar href="campaignmanager/lib/httpcore-4.1.2.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+    <jar href="campaignmanager/lib/httpmime-4.1.2.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+   <jar href="campaignmanager/lib/jackson-core-asl-1.8.5.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+   <jar href="campaignmanager/lib/jackson-mapper-asl-1.8.5.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/>
+   <jar href="campaignmanager/lib/joda-time-2.0.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/>
+   <jar href="campaignmanager/lib/json.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+   <jar href="campaignmanager/lib/org.ektorp-1.2.1.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se" version="1.6+"/>
+   <jar href="campaignmanager/lib/slf4j-api-1.6.1.jar"/>
+</resources>
+
+<resources>
+    <j2se href="http://java.sun.com/products/autodl/j2se"  version="1.6+"/>
+   <jar href="campaignmanager/lib/slf4j-nop-1.6.2.jar"/>
+</resources>
+
+<application-desc main-class="POSCampaignBroadcast.POSCampaignBroadcast"/>
+
+</jnlp>

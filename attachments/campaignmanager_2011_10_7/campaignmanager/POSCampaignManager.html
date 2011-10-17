@@ -1,0 +1,19 @@
+<html>
+  <head></head>
+  <body>
+    <script src="http://www.java.com/js/deployJava.js"></script>
+    <script>
+      // using JavaScript to get location of JNLP file relative to HTML page
+      var dir = location.href.substring(0, location.href.lastIndexOf('/')+1);
+      var url = dir + "campaignmanager_2011_10_7/campaignmanager/POSCampaignManager.jnlp";
+      console.log("dir");
+      console.log(dir);
+      console.log("url");
+      console.log(url);
+      deployJava.createWebStartLaunchButton(url, '1.6.0');
+    </script>
+    <noscript>
+      <a href="http://192.168.1.254:5984/campaigns/_design/app/campaignmanager_2011_10_7/campaignmanager/POSCampaignManager.jnlp">Launch</a>
+    </noscript>
+  </body>
+</html>
